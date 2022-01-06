@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    멀캠은행_계좌조회
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <style>
+    .mine{
+      background-color: rgb(221, 37, 103);
+    }
+  </style>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-3" href="bankMain.html">
+        <span class="ms-5 font-weight-bold font-size-big text-white">멀캠 은행</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="makeAcc.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons">account_circle</i>
+            </div>
+            <span class="nav-link-text ms-1">계좌생성</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="deposit.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons">add</i>
+            </div>
+            <span class="nav-link-text ms-1">계좌입금</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="withdraw.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons">remove</i>
+            </div>
+            <span class="nav-link-text ms-1">계좌출금</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="accInfo.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons">account_box</i>
+            </div>
+            <span class="nav-link-text ms-1">계좌조회</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="accAllInfo.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons">manage_search</i>
+            </div>
+            <span class="nav-link-text ms-1">전체조회</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!-- Navbar -->
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-2 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="bankMain.html">홈으로</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">현재화면 : 계좌조회</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">계좌조회 화면 입니다.</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+          </div>
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item px-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0">
+                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid px-2 px-md-4">
+      <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+        <span class="mask  bg-gradient-primary  opacity-6"></span>
+      </div>
+      <div class="card card-body mx-3 mx-md-4 mt-n6">
+        <div class="row gx-4 mb-2">
+        </div>
+        <div class="row">
+          <div class="row">
+            <div class="col-12 col-xl-4">
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="card-body" id="query">
+                <form role="form">
+                  <div class="input-group input-group-outline mb-0">
+                    <label class="form-label">계좌번호</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="text-center">
+                    <button type="button" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0" id="alert">계좌조회</button>
+                  </div>
+                </form>
+              </div>
+              <div class="card-body" id="result" hidden>
+                <form role="form">
+                  <div class="mb-3">
+                    <label class="form-label font-weight-bold" id="no_label"></label>
+                    <input type="text" class="form-control text-center font-weight-bold" id="acc_no" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label font-weight-bold" id="name_label"></label>
+                    <input type="text" class="form-control text-center font-weight-bold" id="name" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label font-weight-bold" id="cash_label"></label>
+                    <input type="text" class="form-control text-center font-weight-bold" id="cash" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label font-weight-bold" id="type_label"></label>
+                    <input type="text" class="form-control text-center font-weight-bold" id="type" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label font-weight-bold" id="grade_label"></label>
+                    <input type="text" class="form-control text-center font-weight-bold" id="grade" disabled>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    <footer class="footer py-4  ">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-lg-6 mb-lg-0 mb-4">
+            <div class="copyright text-center text-sm text-muted text-lg-start">
+              © <script>
+                document.write(new Date().getFullYear())
+              </script>,
+              made by
+              <span class="font-weight-bold" target="_blank">KKP</span>
+              by Creative Tim
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="fixed-plugin">
+    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
+    </a>
+    <div class="card shadow-lg">
+      <div class="card-header pb-0 pt-3">
+        <div class="float-start">
+          <h5 class="mt-3 mb-0">사용자 설정</h5>
+        </div>
+        <div class="float-end mt-4">
+          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <!-- End Toggle Button -->
+      </div>
+      <hr class="horizontal dark my-1">
+      <div class="card-body pt-sm-3 pt-0">
+        <!-- Sidenav Type -->
+        <div class="mt-3">
+          <h6 class="mb-1">메뉴 바 변경</h6>
+          <p class="text-sm">PC 전체화면에서 변경 가능</p>
+        </div>
+        <div class="d-flex">
+          <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark" onclick="sidebarType(this)">Dark</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent" onclick="sidebarType(this)">Transparent</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
+        </div>
+        <!-- Navbar Fixed -->
+        <div class="mt-3 d-flex">
+          <h6 class="mb-0">상단 바 고정</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
+          </div>
+        </div>
+        <hr class="horizontal dark my-3">
+        <div class="mt-2 d-flex">
+          <h6 class="mb-0">다크 모드</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          </div>
+        </div>
+        <hr class="horizontal dark my-sm-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="../assets/js/material-dashboard.min.js?v=3.0.0"></script>
+  <script src="D:\class\front_end\bank_web_work\account.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $('#alert').click(function() {
+      $('#query').hide();
+      $('#result').attr('hidden', false);
+      let accstr = '{"id":1001,"name":"park","balance":200000,"grade":"VIP"}';
+      let acc = JSON.parse(accstr);
+      $('#no_label').text("계좌번호");
+      $('#acc_no').val(acc.id);
+      $('#name_label').text("고객이름");
+      $('#name').val(acc.name);
+      $('#cash_label').text("계좌잔액(단위:KRW)");
+      $('#cash').val(acc.balance);
+      $('#grade_label').text("계좌등급");
+      $('#grade').val(acc.grade);
+      if (acc.grade == 'null') {
+          $('#type_label').text("계좌종류");
+          $('#type').val("일반계좌");
+      } else {
+          $('#type_label').text("계좌종류");
+          $('#type').val("특수계좌");
+      }
+      Swal.fire({
+      icon: 'success',
+      title: '계좌조회 완료',
+      text: "계좌정보를 확인하세요."
+      });
+    });
+  </script>
+</body>
+
+</html>
